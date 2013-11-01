@@ -37,14 +37,14 @@
 			<locationURI>WORKSPACE_LOC/SoulCraft/environment.properties</locationURI>
 		</link>
 		<link>
+			<name>private.properties</name>
+			<type>1</type>
+			<locationURI>WORKSPACE_LOC/SoulCraft/private.properties</locationURI>
+		</link>
+		<link>
 			<name>resources</name>
 			<type>2</type>
 			<locationURI>WORKSPACE_LOC/SoulCraft/resources</locationURI>
-		</link>
-		<link>
-			<name>version.xml</name>
-			<type>1</type>
-			<locationURI>WORKSPACE_LOC/SoulCraft/version.xml</locationURI>
 		</link>
 	</linkedResources>
 	<filteredResources>
