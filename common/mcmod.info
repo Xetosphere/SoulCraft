@@ -1,0 +1,20 @@
+[
+{
+  "modid": "SC",
+  "name": "Soul Craft",
+  "description": "The Soul Craft mod.",
+  "version": "0.1",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "Xetosphere"
+  ],
+  "credits": "By Xetosphere.",
+  "logoFile": "/assets/sc/textures/logo/logo.png",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
