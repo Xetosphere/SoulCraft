@@ -1,4 +1,7 @@
 
+container.duplicator=Duplicator
+container.arcaneFuser=Arcane Fuser
+
 item.sc:soroniteDust.name=Soronite Dust
 item.sc:arcaneGem.name=Arcane Gem
 item.sc:soulEmpty.name=Empty Soul
