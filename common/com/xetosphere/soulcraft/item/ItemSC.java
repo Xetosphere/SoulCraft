@@ -13,6 +13,7 @@ public class ItemSC extends Item {
 		maxStackSize = 1;
 	}
 
+	@Override
 	public void registerIcons(IconRegister iconRegister) {
 
 		itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));

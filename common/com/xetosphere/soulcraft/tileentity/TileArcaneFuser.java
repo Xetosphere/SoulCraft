@@ -40,16 +40,19 @@ public class TileArcaneFuser extends TileSC implements IInventory {
 		inventory = new ItemStack[INVENTORY_SIZE];
 	}
 
+	@Override
 	public int getSizeInventory() {
 
 		return inventory.length;
 	}
 
+	@Override
 	public ItemStack getStackInSlot(int slot) {
 
 		return inventory[slot];
 	}
 
+	@Override
 	public ItemStack decrStackSize(int slot, int ammount) {
 
 		ItemStack itemStack = getStackInSlot(slot);
@@ -67,6 +70,7 @@ public class TileArcaneFuser extends TileSC implements IInventory {
 		return itemStack;
 	}
 
+	@Override
 	public ItemStack getStackInSlotOnClosing(int slot) {
 
 		ItemStack itemStack = getStackInSlot(slot);
@@ -77,6 +81,7 @@ public class TileArcaneFuser extends TileSC implements IInventory {
 		return itemStack;
 	}
 
+	@Override
 	public void setInventorySlotContents(int slot, ItemStack itemStack) {
 
 		inventory[slot] = itemStack;
@@ -85,24 +90,29 @@ public class TileArcaneFuser extends TileSC implements IInventory {
 		}
 	}
 
+	@Override
 	public String getInvName() {
 
 		return this.hasCustomName() ? this.getCustomName() : Strings.CONTAINER_ARCANE_FUSER_NAME;
 	}
 
+	@Override
 	public int getInventoryStackLimit() {
 
 		return 64;
 	}
 
+	@Override
 	public void openChest() {
 
 	}
 
+	@Override
 	public void closeChest() {
 
 	}
 
+	@Override
 	public void readFromNBT(NBTTagCompound nbtTagCompound) {
 
 		super.readFromNBT(nbtTagCompound);
@@ -121,6 +131,7 @@ public class TileArcaneFuser extends TileSC implements IInventory {
 		}
 	}
 
+	@Override
 	public void writeToNBT(NBTTagCompound nbtTagCompound) {
 
 		super.writeToNBT(nbtTagCompound);
@@ -196,6 +207,7 @@ public class TileArcaneFuser extends TileSC implements IInventory {
 		return this.fuserFuseTime > 0;
 	}
 
+	@Override
 	public void updateEntity() {
 
 		boolean flag = this.fuserFuseTime > 0;
@@ -253,7 +265,7 @@ public class TileArcaneFuser extends TileSC implements IInventory {
 
 		} else {
 
-			ItemStack itemstack = ArcaneFuserRecipes.fusing().getFusingResult(this.inventory[INPUT_INVENTORY_INDEX].getItem().itemID, this.inventory[INPUT_INVENTORY_INDEX].getItemDamage(), this.inventory[DUST_INVENTORY_INDEX].getItem().itemID, this.inventory[DUST_INVENTORY_INDEX].getItemDamage());
+			ItemStack itemstack = ArcaneFuserRecipes.fusing().getFusingResult(this.inventory[INPUT_INVENTORY_INDEX].getItem(), this.inventory[INPUT_INVENTORY_INDEX].getItemDamage(), this.inventory[DUST_INVENTORY_INDEX].getItem());
 
 			if (itemstack == null) return false;
 			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null) return true;
@@ -268,7 +280,7 @@ public class TileArcaneFuser extends TileSC implements IInventory {
 
 		if (this.canSmelt()) {
 
-			ItemStack itemstack = ArcaneFuserRecipes.fusing().getFusingResult(this.inventory[INPUT_INVENTORY_INDEX].getItem().itemID, this.inventory[INPUT_INVENTORY_INDEX].getItemDamage(), this.inventory[DUST_INVENTORY_INDEX].getItem().itemID, this.inventory[DUST_INVENTORY_INDEX].getItemDamage());
+			ItemStack itemstack = ArcaneFuserRecipes.fusing().getFusingResult(this.inventory[INPUT_INVENTORY_INDEX].getItem(), this.inventory[INPUT_INVENTORY_INDEX].getItemDamage(), this.inventory[DUST_INVENTORY_INDEX].getItem());
 
 			if (this.inventory[OUTPUT_INVENTORY_INDEX] == null) {
 

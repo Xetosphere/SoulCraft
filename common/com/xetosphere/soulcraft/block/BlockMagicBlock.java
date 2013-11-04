@@ -21,6 +21,7 @@ public class BlockMagicBlock extends Block {
 		setResistance(8.0F);
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
 

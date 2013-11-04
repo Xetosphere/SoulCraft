@@ -68,6 +68,7 @@ public class TileSC extends TileEntity {
 		return true;
 	}
 
+	@Override
 	public void readFromNBT(NBTTagCompound nbtTagCompound) {
 
 		super.readFromNBT(nbtTagCompound);
@@ -85,6 +86,7 @@ public class TileSC extends TileEntity {
 		}
 	}
 
+	@Override
 	public void writeToNBT(NBTTagCompound nbtTagCompound) {
 
 		super.writeToNBT(nbtTagCompound);
@@ -97,11 +99,13 @@ public class TileSC extends TileEntity {
 		}
 	}
 
+	@Override
 	public Packet getDescriptionPacket() {
 
 		return PacketTypeHandler.populatePacket(new PacketTileUpdate(xCoord, yCoord, zCoord, orientation, state, customName));
 	}
 
+	@Override
 	public String toString() {
 
 		StringBuilder stringBuilder = new StringBuilder();

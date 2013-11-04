@@ -33,16 +33,19 @@ public class TileDuplicator extends TileSC implements IInventory {
 		inventory = new ItemStack[INVENTORY_SIZE];
 	}
 
+	@Override
 	public int getSizeInventory() {
 
 		return inventory.length;
 	}
 
+	@Override
 	public ItemStack getStackInSlot(int slot) {
 
 		return inventory[slot];
 	}
 
+	@Override
 	public ItemStack decrStackSize(int slot, int ammount) {
 
 		ItemStack itemStack = getStackInSlot(slot);
@@ -60,6 +63,7 @@ public class TileDuplicator extends TileSC implements IInventory {
 		return itemStack;
 	}
 
+	@Override
 	public ItemStack getStackInSlotOnClosing(int slot) {
 
 		ItemStack itemStack = getStackInSlot(slot);
@@ -70,6 +74,7 @@ public class TileDuplicator extends TileSC implements IInventory {
 		return itemStack;
 	}
 
+	@Override
 	public void setInventorySlotContents(int slot, ItemStack itemStack) {
 
 		inventory[slot] = itemStack;
@@ -78,24 +83,29 @@ public class TileDuplicator extends TileSC implements IInventory {
 		}
 	}
 
+	@Override
 	public String getInvName() {
 
 		return this.hasCustomName() ? this.getCustomName() : Strings.CONTAINER_DUPLICATOR_NAME;
 	}
 
+	@Override
 	public int getInventoryStackLimit() {
 
 		return 64;
 	}
 
+	@Override
 	public void openChest() {
 
 	}
 
+	@Override
 	public void closeChest() {
 
 	}
 
+	@Override
 	public void readFromNBT(NBTTagCompound nbtTagCompound) {
 
 		super.readFromNBT(nbtTagCompound);
@@ -114,6 +124,7 @@ public class TileDuplicator extends TileSC implements IInventory {
 		}
 	}
 
+	@Override
 	public void writeToNBT(NBTTagCompound nbtTagCompound) {
 
 		super.writeToNBT(nbtTagCompound);
@@ -134,16 +145,19 @@ public class TileDuplicator extends TileSC implements IInventory {
 		nbtTagCompound.setTag("Items", tagList);
 	}
 
+	@Override
 	public boolean isInvNameLocalized() {
 
 		return this.hasCustomName();
 	}
 
+	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemStack) {
 
 		return true;
 	}
 
+	@Override
 	public String toString() {
 
 		StringBuilder stringBuilder = new StringBuilder();
@@ -189,6 +203,7 @@ public class TileDuplicator extends TileSC implements IInventory {
 		return this.duplicatorDupleTime > 0;
 	}
 
+	@Override
 	public void updateEntity() {
 
 		boolean flag = this.duplicatorDupleTime > 0;

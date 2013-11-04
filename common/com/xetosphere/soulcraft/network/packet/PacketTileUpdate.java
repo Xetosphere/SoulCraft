@@ -35,6 +35,7 @@ public class PacketTileUpdate extends PacketSC {
 		this.customName = customName;
 	}
 
+	@Override
 	public void writeData(DataOutputStream data) throws IOException {
 
 		data.writeInt(x);
@@ -45,6 +46,7 @@ public class PacketTileUpdate extends PacketSC {
 		data.writeUTF(customName);
 	}
 
+	@Override
 	public void readData(DataInputStream data) throws IOException {
 
 		x = data.readInt();
@@ -55,6 +57,7 @@ public class PacketTileUpdate extends PacketSC {
 		customName = data.readUTF();
 	}
 
+	@Override
 	public void execute(INetworkManager manager, Player player) {
 
 		SoulCraft.proxy.handleTileEntityPacket(x, y, z, ForgeDirection.getOrientation(orientation), state, customName);

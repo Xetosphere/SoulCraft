@@ -24,19 +24,22 @@ public class BlockMagicOre extends Block {
 		setResistance(8.0F);
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
 
 		blockIcon = iconRegister.registerIcon(getUnlocalizedName().substring(getUnlocalizedName().indexOf('.') + 1));
 	}
 
+	@Override
 	public int idDropped(int id, Random random, int meta) {
 
 		return ModItems.soroniteDust.itemID;
 	}
 
+	@Override
 	public int quantityDropped(Random random) {
-		
+
 		return 2 + (random.nextInt(3) + 1);
 	}
 

@@ -11,6 +11,7 @@ import com.xetosphere.soulcraft.creativetab.TabSC;
 import com.xetosphere.soulcraft.item.ModItems;
 import com.xetosphere.soulcraft.lib.Reference;
 import com.xetosphere.soulcraft.network.PacketHandler;
+import com.xetosphere.soulcraft.recipe.ModRecipes;
 import com.xetosphere.soulcraft.world.gen.WorldGen;
 
 import cpw.mods.fml.common.Mod;
@@ -47,6 +48,9 @@ public class SoulCraft {
 
 		// Adds the blocks that the moderation contains. As well as block recipes and registering the blocks.
 		ModBlocks.init();
+
+		// Adds the crafting recipes within this moderation.
+		ModRecipes.addRecipes();
 
 		// Adds everything that has to do with generation.
 		WorldGen.init();

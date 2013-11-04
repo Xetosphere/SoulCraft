@@ -11,6 +11,7 @@ public class SlotDuplicator extends Slot {
 		super(inventory, x, y, z);
 	}
 
+	@Override
 	public boolean isItemValid(ItemStack par1ItemStack) {
 
 		return false;

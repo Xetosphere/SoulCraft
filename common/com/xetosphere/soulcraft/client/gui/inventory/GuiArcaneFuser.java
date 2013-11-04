@@ -21,6 +21,7 @@ public class GuiArcaneFuser extends GuiContainer {
 		this.tileArcaneFuser = tileArcaneFuser;
 	}
 
+	@Override
 	protected void drawGuiContainerForegroundLayer(int x, int y) {
 
 		String containerName = tileArcaneFuser.isInvNameLocalized() ? tileArcaneFuser.getInvName() : StatCollector.translateToLocal(tileArcaneFuser.getInvName());
@@ -28,6 +29,7 @@ public class GuiArcaneFuser extends GuiContainer {
 		fontRenderer.drawString(StatCollector.translateToLocal(Strings.CONTAINER_INVENTORY), 8, ySize - 96 + 2, 4210752);
 	}
 
+	@Override
 	protected void drawGuiContainerBackgroundLayer(float opacity, int x, int y) {
 
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);

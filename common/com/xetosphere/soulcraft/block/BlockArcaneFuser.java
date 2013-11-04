@@ -40,12 +40,14 @@ public class BlockArcaneFuser extends BlockSC {
 		this.setResistance(12F);
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public Icon getIcon(int side, int meta) {
 
 		return side == 1 ? this.iconTop : side == 0 ? this.iconBottom : blockIcon;
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
 
@@ -54,6 +56,7 @@ public class BlockArcaneFuser extends BlockSC {
 		this.iconBottom = iconRegister.registerIcon(Strings.RESOURCE_PREFIX + Strings.ARCANE_FUSER_NAME + "_bottom");
 	}
 
+	@Override
 	public String getUnlocalizedName() {
 
 		StringBuilder unlocalizedName = new StringBuilder();
@@ -65,17 +68,20 @@ public class BlockArcaneFuser extends BlockSC {
 		return unlocalizedName.toString();
 	}
 
+	@Override
 	public TileEntity createNewTileEntity(World world) {
 
 		return new TileArcaneFuser();
 	}
 
+	@Override
 	public void breakBlock(World world, int x, int y, int z, int id, int meta) {
 
 		dropInventory(world, x, y, z);
 		super.breakBlock(world, x, y, z, id, meta);
 	}
 
+	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
 
 		if (player.isSneaking()) {

@@ -12,6 +12,7 @@ public class TabSC extends CreativeTabs {
 		super(id, nameInCode);
 	}
 
+	@Override
 	public ItemStack getIconItemStack() {
 
 		return new ItemStack(ModItems.soroniteDust);

@@ -21,6 +21,7 @@ public class GuiDuplicator extends GuiContainer {
 		this.tileDuplicator = tileDuplicator;
 	}
 
+	@Override
 	protected void drawGuiContainerForegroundLayer(int x, int y) {
 
 		String containerName = tileDuplicator.isInvNameLocalized() ? tileDuplicator.getInvName() : StatCollector.translateToLocal(tileDuplicator.getInvName());
@@ -28,6 +29,7 @@ public class GuiDuplicator extends GuiContainer {
 		fontRenderer.drawString(StatCollector.translateToLocal(Strings.CONTAINER_INVENTORY), 8, ySize - 96 + 2, 4210752);
 	}
 
+	@Override
 	protected void drawGuiContainerBackgroundLayer(float opacity, int x, int y) {
 
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);

@@ -19,17 +19,20 @@ public class ItemArcaneGem extends ItemSC {
 		setMaxDamage(32 - 1);
 	}
 
+	@Override
 	public String getItemDisplayName(ItemStack itemStack) {
 
 		return EnumChatFormatting.BLUE + super.getItemDisplayName(itemStack);
 	}
 
+	@Override
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par5Boolean) {
 
 		list.add("Uses: " + (this.getMaxDamage() - itemStack.getItemDamage()));
 	}
 
+	@Override
 	public ItemStack getContainerItemStack(ItemStack itemStack) {
 
 		ItemStack dupleStack = new ItemStack(ModItems.arcaneGem, 1, (itemStack.getItemDamage() + 1));
@@ -37,6 +40,7 @@ public class ItemArcaneGem extends ItemSC {
 		return dupleStack;
 	}
 
+	@Override
 	public boolean doesContainerItemLeaveCraftingGrid(ItemStack par1ItemStack) {
 
 		return false;

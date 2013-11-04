@@ -47,6 +47,7 @@ public class ContainerDuplicator extends Container {
 		}
 	}
 
+	@Override
 	public void addCraftingToCrafters(ICrafting par1ICrafting) {
 
 		super.addCraftingToCrafters(par1ICrafting);
@@ -55,6 +56,7 @@ public class ContainerDuplicator extends Container {
 		par1ICrafting.sendProgressBarUpdate(this, 2, this.duplicator.currentItemDupleTime);
 	}
 
+	@Override
 	public void detectAndSendChanges() {
 
 		super.detectAndSendChanges();
@@ -81,6 +83,7 @@ public class ContainerDuplicator extends Container {
 		}
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void updateProgressBar(int par1, int par2) {
 
@@ -97,11 +100,13 @@ public class ContainerDuplicator extends Container {
 		}
 	}
 
+	@Override
 	public boolean canInteractWith(EntityPlayer player) {
 
 		return true;
 	}
 
+	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
 
 		ItemStack itemstack = null;

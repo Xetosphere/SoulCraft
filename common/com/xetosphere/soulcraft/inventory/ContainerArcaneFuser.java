@@ -49,6 +49,7 @@ public class ContainerArcaneFuser extends Container {
 		}
 	}
 
+	@Override
 	public void addCraftingToCrafters(ICrafting par1ICrafting) {
 
 		super.addCraftingToCrafters(par1ICrafting);
@@ -57,6 +58,7 @@ public class ContainerArcaneFuser extends Container {
 		par1ICrafting.sendProgressBarUpdate(this, 2, this.fuser.currentItemFuseTime);
 	}
 
+	@Override
 	public void detectAndSendChanges() {
 
 		super.detectAndSendChanges();
@@ -83,6 +85,7 @@ public class ContainerArcaneFuser extends Container {
 		}
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void updateProgressBar(int par1, int par2) {
 
@@ -99,11 +102,13 @@ public class ContainerArcaneFuser extends Container {
 		}
 	}
 
+	@Override
 	public boolean canInteractWith(EntityPlayer player) {
 
 		return true;
 	}
 
+	@Override
 	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int slotIndex) {
 
 		ItemStack itemStack = null;

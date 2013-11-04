@@ -22,6 +22,7 @@ public abstract class BlockSC extends BlockContainer {
 		super(id, material);
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
 
@@ -33,6 +34,7 @@ public abstract class BlockSC extends BlockContainer {
 		return unlocalizedName.substring(unlocalizedName.indexOf(":") + 1);
 	}
 
+	@Override
 	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entityLiving, ItemStack itemStack) {
 
 		int direction = 0;

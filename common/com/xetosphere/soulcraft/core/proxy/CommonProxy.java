@@ -44,13 +44,12 @@ public class CommonProxy implements IGuiHandler {
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 
-
 		if (ID == GuiIDs.DUPLICATOR) {
 
 			TileDuplicator tileDuplicator = (TileDuplicator) world.getBlockTileEntity(x, y, z);
 			return new ContainerDuplicator(player.inventory, tileDuplicator);
 		}
-		
+
 		else if (ID == GuiIDs.ARCANE_FUSER) {
 
 			TileArcaneFuser tileFuser = (TileArcaneFuser) world.getBlockTileEntity(x, y, z);
