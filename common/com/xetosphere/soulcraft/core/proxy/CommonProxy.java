@@ -5,13 +5,16 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.xetosphere.soulcraft.client.gui.inventory.GuiArcaneFuser;
+import com.xetosphere.soulcraft.client.gui.inventory.GuiAuraCrusher;
 import com.xetosphere.soulcraft.client.gui.inventory.GuiDuplicator;
 import com.xetosphere.soulcraft.inventory.ContainerArcaneFuser;
+import com.xetosphere.soulcraft.inventory.ContainerAuraCrusher;
 import com.xetosphere.soulcraft.inventory.ContainerDuplicator;
 import com.xetosphere.soulcraft.lib.GuiIDs;
 import com.xetosphere.soulcraft.lib.Reference;
 import com.xetosphere.soulcraft.lib.Strings;
 import com.xetosphere.soulcraft.tileentity.TileArcaneFuser;
+import com.xetosphere.soulcraft.tileentity.TileAuraCrusher;
 import com.xetosphere.soulcraft.tileentity.TileDuplicator;
 
 import cpw.mods.fml.common.network.IGuiHandler;
@@ -27,6 +30,7 @@ public class CommonProxy implements IGuiHandler {
 
 		GameRegistry.registerTileEntity(TileDuplicator.class, Reference.MOD_ID + Strings.DUPLICATOR_NAME);
 		GameRegistry.registerTileEntity(TileArcaneFuser.class, Reference.MOD_ID + Strings.ARCANE_FUSER_NAME);
+		GameRegistry.registerTileEntity(TileAuraCrusher.class, Reference.MOD_ID + Strings.AURA_CRUSHER_NAME);
 	}
 
 	public void sendRequestEventPacket(byte eventType, int originX, int originY, int originZ, byte sideHit, byte rangeX, byte rangeY, byte rangeZ, String data) {
@@ -56,6 +60,12 @@ public class CommonProxy implements IGuiHandler {
 			return new ContainerArcaneFuser(player.inventory, tileFuser);
 		}
 
+		else if (ID == GuiIDs.AURA_CRUSHER) {
+
+			TileAuraCrusher tileCrusher = (TileAuraCrusher) world.getBlockTileEntity(x, y, z);
+			return new ContainerAuraCrusher(player.inventory, tileCrusher);
+		}
+
 		return null;
 	}
 
@@ -72,6 +82,12 @@ public class CommonProxy implements IGuiHandler {
 
 			TileArcaneFuser tileFuser = (TileArcaneFuser) world.getBlockTileEntity(x, y, z);
 			return new GuiArcaneFuser(player.inventory, tileFuser);
+		}
+
+		else if (ID == GuiIDs.AURA_CRUSHER) {
+
+			TileAuraCrusher tileCrusher = (TileAuraCrusher) world.getBlockTileEntity(x, y, z);
+			return new GuiAuraCrusher(player.inventory, tileCrusher);
 		}
 
 		return null;

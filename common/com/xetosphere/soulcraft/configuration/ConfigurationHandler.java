@@ -27,8 +27,10 @@ public class ConfigurationHandler {
 			// Blocks
 			BlockIDs.SORONITE_ORE = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.SORONITE_ORE_NAME, BlockIDs.SORONITE_ORE_DEFAULT).getInt(BlockIDs.SORONITE_ORE_DEFAULT);
 			BlockIDs.SORONITE_BLOCK = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.SORONITE_BLOCK_NAME, BlockIDs.SORONITE_BLOCK_DEFAULT).getInt(BlockIDs.SORONITE_BLOCK_DEFAULT);
+			BlockIDs.SORONITE_BRICK = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.SORONITE_BRICK_NAME, BlockIDs.SORONITE_BRICK_DEFAULT).getInt(BlockIDs.SORONITE_BRICK_DEFAULT);
 			BlockIDs.DUPLICATOR = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.DUPLICATOR_NAME, BlockIDs.DUPLICATOR_DEFAULT).getInt(BlockIDs.DUPLICATOR_DEFAULT);
 			BlockIDs.ARCANE_FUSER = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.ARCANE_FUSER_NAME, BlockIDs.ARCANE_FUSER_DEFAULT).getInt(BlockIDs.ARCANE_FUSER_DEFAULT);
+			BlockIDs.AURA_CRUSHER = config.getBlock(Configuration.CATEGORY_BLOCK, Strings.AURA_CRUSHER_NAME, BlockIDs.AURA_CRUSHER_DEFAULT).getInt(BlockIDs.AURA_CRUSHER_DEFAULT);
 
 			// Items
 			ItemIDs.SORONITE_DUST = config.getItem(Configuration.CATEGORY_ITEM, Strings.SORONITE_DUST_NAME, ItemIDs.SORONITE_DUST_DEFAULT).getInt(ItemIDs.SORONITE_DUST_DEFAULT);

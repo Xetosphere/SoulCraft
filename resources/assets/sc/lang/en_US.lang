@@ -1,34 +1,17 @@
 
 container.duplicator=Duplicator
 container.arcaneFuser=Arcane Fuser
+container.auraCrusher=Aura Crusher
 
 item.sc:soroniteDust.name=Soronite Dust
 item.sc:arcaneGem.name=Arcane Gem
-item.sc:soulEmpty.name=Empty Soul
-item.sc:soulZombie.name=Zombie Soul
-item.sc:soulSpider.name=Spider Soul
-item.sc:soulCreeper.name=Creeper Soul
-item.sc:soulEnderman.name=Enderman Soul
-item.sc:soulZombiePigman.name=Zombie Pigman Soul
-item.sc:soulSheep.name=Sheep Soul
-item.sc:soulCow.name=Cow Soul
-item.sc:soulBlaze.name=Blaze Soul
-item.sc:soulSkeleton.name=Skeleton Soul
-item.sc:soulWitherSkeleton.name=Wither Skeleton Soul
-item.sc:soulSlime.name=Slime Soul
-item.sc:soulMagmaCube.name=MagmaCube Soul
-item.sc:soulSilverFish.name=Silver Fish Soul
-item.sc:soulCaveSpider.name=Cave Spider Soul
-item.sc:soulWitch.name=Witch Soul
-item.sc:soulPig.name=Pig Soul
-item.sc:soulHorse.name=Horse Soul
-item.sc:soulChicken.name=Chicken Soul
-item.sc:soulBat.name=Bat Soul
 item.sc:soroniteIngot.name=Soronite Ingot
 
 itemGroup.SC=Soul Craft
 
 tile.sc:soroniteOre.name=Soronite Ore
 tile.sc:soroniteBlock.name=Soronite Block
+tile.sc:soroniteBrick.name=Soronite Brick
 tile.sc:duplicator.name=Duplicator
 tile.sc:arcaneFuser.name=Arcane Fuser
+tile.sc:auraCrusher.name=Aura Crusher
