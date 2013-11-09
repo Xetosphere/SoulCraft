@@ -1,7 +1,6 @@
 package com.xetosphere.soulcraft.tileentity;
 
 import net.minecraft.inventory.IInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -305,7 +304,7 @@ public class TileDuplicator extends TileSC implements IInventory {
 		int i = itemStack.getItem().itemID;
 		int meta = itemStack.getItemDamage();
 
-		if (i == ModItems.soroniteDust.itemID && meta == 0) return 400;
+		if (i == ModItems.soroniteDust.itemID && meta == 0) return 1000;
 
 		return GameRegistry.getFuelValue(itemStack);
 	}
@@ -317,21 +316,7 @@ public class TileDuplicator extends TileSC implements IInventory {
 
 	public static int getTimeRequired(ItemStack stack) {
 
-		if (stack != null) {
-			if (stack.itemID == ModItems.soroniteIngot.itemID) {
-				return 1000;
-			}
-
-			if (stack.itemID == Item.diamond.itemID || stack.itemID == Item.emerald.itemID || (stack.itemID == Item.appleGold.itemID && stack.getItemDamage() == 1)) {
-				return 800;
-			}
-
-			else if (stack.itemID == Item.ingotIron.itemID || stack.itemID == Item.ingotGold.itemID || (stack.itemID == Item.appleGold.itemID && stack.getItemDamage() == 0) || stack.itemID == Item.brick.itemID || stack.itemID == Item.blazePowder.itemID) {
-				return 600;
-			}
-		}
-
-		return 400;
+		return 1000;
 	}
 
 }

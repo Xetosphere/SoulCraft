@@ -36,6 +36,7 @@ public class ConfigurationHandler {
 			ItemIDs.SORONITE_DUST = config.getItem(Configuration.CATEGORY_ITEM, Strings.SORONITE_DUST_NAME, ItemIDs.SORONITE_DUST_DEFAULT).getInt(ItemIDs.SORONITE_DUST_DEFAULT);
 			ItemIDs.SORONITE_INGOT = config.getItem(Configuration.CATEGORY_ITEM, Strings.SORONITE_INGOT_NAME, ItemIDs.SORONITE_INGOT_DEFAULT).getInt(ItemIDs.SORONITE_INGOT_DEFAULT);
 			ItemIDs.ARCANE_GEM = config.getItem(Configuration.CATEGORY_ITEM, Strings.ARCANE_GEM_NAME, ItemIDs.ARCANE_GEM_DEFAULT).getInt(ItemIDs.ARCANE_GEM_DEFAULT);
+			ItemIDs.SORONITE_PAXEL = config.getItem(Configuration.CATEGORY_ITEM, Strings.SORONITE_PAXEL_NAME, ItemIDs.SORONITE_PAXEL_DEFAULT).getInt(ItemIDs.SORONITE_PAXEL_DEFAULT);
 
 		} catch (Exception e) {
 			FMLLog.log(Level.SEVERE, e, Reference.MOD_ID + " had a problem loading its configuration file.");

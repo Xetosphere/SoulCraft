@@ -6,6 +6,7 @@ container.auraCrusher=Aura Crusher
 item.sc:soroniteDust.name=Soronite Dust
 item.sc:arcaneGem.name=Arcane Gem
 item.sc:soroniteIngot.name=Soronite Ingot
+item.sc:soronitePaxel.name=Soronite Paxel
 
 itemGroup.SC=Soul Craft
 

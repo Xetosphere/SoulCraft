@@ -58,12 +58,14 @@ public class ModRecipes {
 
 	private static void craftingRecipes() {
 
-		GameRegistry.addRecipe(new ItemStack(ModBlocks.soroniteBlock), new Object[] { "SSS", "SSS", "SSS", Character.valueOf('S'), ModItems.soroniteIngot });
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.soroniteIngot, 9), ModBlocks.soroniteBlock);
+		GameRegistry.addRecipe(new ItemStack(ModBlocks.soroniteBlock), new Object[] { "SSS", "SSS", "SSS", Character.valueOf('S'), ModItems.soroniteIngot });
+		GameRegistry.addRecipe(new ItemStack(ModBlocks.soroniteBrick), new Object[] { "SS", "SS", Character.valueOf('S'), ModBlocks.soroniteBlock });
 		GameRegistry.addRecipe(new ItemStack(ModItems.arcaneGem), new Object[] { "XYX", "YZY", "XYX", Character.valueOf('X'), ModItems.soroniteDust, Character.valueOf('Y'), Item.diamond, Character.valueOf('Z'), Item.emerald });
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.duplicator), new Object[] { "GWG", "BAB", "BFB", Character.valueOf('G'), Item.ingotGold, Character.valueOf('W'), new ItemStack(Block.cloth, 1, 10), Character.valueOf('B'), Block.netherBrick, Character.valueOf('A'), ModItems.arcaneGem, Character.valueOf('F'), Block.furnaceIdle });
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.arcaneFuser), new Object[] { "GWG", "BRB", "BFB", Character.valueOf('G'), Item.ingotGold, Character.valueOf('W'), new ItemStack(Block.cloth, 1, 5), Character.valueOf('B'), Block.brick, Character.valueOf('R'), Item.redstone, Character.valueOf('F'), Block.furnaceIdle });
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.auraCrusher), new Object[] { "SWS", "OfO", "OFO", Character.valueOf('S'), ModItems.soroniteIngot, Character.valueOf('W'), new ItemStack(Block.cloth, 1, 14), Character.valueOf('O'), Block.obsidian, Character.valueOf('f'), Item.flint, Character.valueOf('F'), Block.furnaceIdle });
+		GameRegistry.addRecipe(new ItemStack(ModItems.soronitePaxel), new Object[] { "SSS", "SWS", " W ", Character.valueOf('S'), ModItems.soroniteIngot, Character.valueOf('W'), Item.stick });
 	}
 
 }

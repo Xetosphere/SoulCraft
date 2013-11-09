@@ -24,6 +24,7 @@ public class Strings {
 	public static final String ARCANE_GEM_NAME = "arcaneGem";
 
 	/* Tool name constants */
+	public static final String SORONITE_PAXEL_NAME = "soronitePaxel";
 
 	/* Armour name constants */
 
