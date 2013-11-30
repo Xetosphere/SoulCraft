@@ -18,12 +18,12 @@ public class WorldGenOres implements IWorldGenerator {
 
 		switch (world.provider.dimensionId) {
 
-			case -1:
-				generateNether(world, random, chunkX * 16, chunkZ * 16);
-			case 0:
-				genereateSurface(world, random, chunkX * 16, chunkZ * 16);
-			case 1:
-				generateEnd(world, random, chunkX * 16, chunkZ * 16);
+		case -1:
+			generateNether(world, random, chunkX * 16, chunkZ * 16);
+		case 0:
+			genereateSurface(world, random, chunkX * 16, chunkZ * 16);
+		case 1:
+			generateEnd(world, random, chunkX * 16, chunkZ * 16);
 		}
 
 	}
@@ -34,7 +34,7 @@ public class WorldGenOres implements IWorldGenerator {
 
 	private void genereateSurface(World world, Random random, int x, int z) {
 
-		addOreSpawn(ModBlocks.soroniteOre, 0, Block.stone, world, random, x, z, 16, 16, 4 + random.nextInt(3), 10, 0, 60);
+		addOreSpawn(ModBlocks.soroniteOre, 0, Block.stone, world, random, x, z, 16, 16, 4 + random.nextInt(3), 8, 0, 60);
 	}
 
 	private void generateEnd(World world, Random random, int x, int z) {

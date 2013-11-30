@@ -17,6 +17,10 @@ public class Strings {
 	public static final String DUPLICATOR_NAME = "duplicator";
 	public static final String ARCANE_FUSER_NAME = "arcaneFuser";
 	public static final String AURA_CRUSHER_NAME = "auraCrusher";
+	public static final String AIR_TOTEM_NAME = "airTotem";
+	public static final String FIRE_TOTEM_NAME = "fireTotem";
+	public static final String WATER_TOTEM_NAME = "waterTotem";
+	public static final String EARTH_TOTEM_NAME = "earthTotem";
 
 	/* Item name constants */
 	public static final String SORONITE_DUST_NAME = "soroniteDust";
